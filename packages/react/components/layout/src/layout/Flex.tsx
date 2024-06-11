@@ -1,0 +1,56 @@
+import { Ref, createElement, forwardRef } from "react";
+import { FlexProps } from "./types";
+import { clsx } from "clsx";
+import { StyleSprinkles } from "../core/style.css";
+import { extractSprinkleProps } from "../utils/properties";
+import { vars } from "@sbjang/themes";
+
+const Flex = (props: FlexProps, ref: Ref<HTMLElement>) => {
+  const {
+    as = "div",
+    color,
+    background,
+    align,
+    basis,
+    direction,
+    grow,
+    justify,
+    shrink,
+    wrap,
+    gap,
+    children,
+  } = props;
+
+  return createElement(
+    as,
+    {
+      ...props,
+      ref,
+      className: clsx([
+        StyleSprinkles(
+          extractSprinkleProps(props, Array.from(StyleSprinkles.properties)),
+        ),
+        props.className,
+      ]),
+      style: {
+        display: "flex",
+        alignItems: align,
+        justifyContent: justify,
+        flexDirection: direction,
+        flexWrap: wrap,
+        flexGrow: grow,
+        flexShrink: shrink,
+        flexBasis: basis,
+        gap,
+        color: vars.colors.$scale?.[color]?.[700] ?? color,
+        background: vars.colors.$scale?.[background]?.[100] ?? background,
+        ...props.style,
+      },
+    },
+    children,
+  );
+};
+
+const _Flex = forwardRef(Flex);
+
+export { _Flex as Flex };
