@@ -14,7 +14,7 @@ export default {
 
 type Story = StoryObj<typeof _Flex>;
 
-export const Flex: Story = {
+export const FlexStory: Story = {
   args: {
     as: "div",
     padding: "5",
