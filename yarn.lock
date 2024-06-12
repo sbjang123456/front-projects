@@ -2738,6 +2738,29 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@sbjang/react-components-button@workspace:^, @sbjang/react-components-button@workspace:packages/react/components/button":
+  version: 0.0.0-use.local
+  resolution: "@sbjang/react-components-button@workspace:packages/react/components/button"
+  dependencies:
+    "@sbjang/esbuild-config": "workspace:^"
+    "@sbjang/themes": "workspace:^"
+    "@types/react": ^18.3.3
+    "@types/react-dom": ^18.3.0
+    "@vanilla-extract/css": ^1.15.2
+    "@vanilla-extract/dynamic": ^2.1.1
+    "@vanilla-extract/esbuild-plugin": ^2.3.6
+    "@vanilla-extract/recipes": ^0.5.3
+    "@vanilla-extract/sprinkles": ^1.6.2
+    clsx: ^2.1.1
+    react: ^18.3.1
+    react-dom: ^18.3.1
+    typescript: 5.2.2
+  peerDependencies:
+    "@sbjang/themes": "workspace:^"
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
 "@sbjang/react-components-layout@workspace:^, @sbjang/react-components-layout@workspace:packages/react/components/layout":
   version: 0.0.0-use.local
   resolution: "@sbjang/react-components-layout@workspace:packages/react/components/layout"
@@ -2765,6 +2788,7 @@ __metadata:
   resolution: "@sbjang/storybook@workspace:services/storybook"
   dependencies:
     "@chromatic-com/storybook": ^1.5.0
+    "@sbjang/react-components-button": "workspace:^"
     "@sbjang/react-components-layout": "workspace:^"
     "@sbjang/themes": "workspace:^"
     "@storybook/addon-essentials": ^8.1.6
@@ -4239,6 +4263,15 @@ __metadata:
     modern-ahocorasick: ^1.0.0
     picocolors: ^1.0.0
   checksum: acb08a943de47daee6d339bbb5c5487a3f3dc26a38a9681babffe244dc2469c54595d39ffdb4b36e08511dd2d3eb2399110acb1bb767a0411d01d599a7300756
+  languageName: node
+  linkType: hard
+
+"@vanilla-extract/dynamic@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "@vanilla-extract/dynamic@npm:2.1.1"
+  dependencies:
+    "@vanilla-extract/private": ^1.0.5
+  checksum: 03fd6bcd477dcb022f0186e17ad7caa4d30b2db7e39df61ae778fb129ee005585a70eb56ebf656b9deba2354ce3b41a7db18823714566538f64d582b27ff57fa
   languageName: node
   linkType: hard
 
