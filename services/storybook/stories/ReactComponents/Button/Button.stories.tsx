@@ -1,3 +1,4 @@
+import React from "react";
 import "@sbjang/react-components-button/style.css";
 import { Button as _Button } from "@sbjang/react-components-button";
 import type { Meta, StoryObj } from "@storybook/react";
@@ -32,6 +33,8 @@ export const ButtonStory: Story = {
     children: "button",
     size: "lg",
     variant: "outline",
-    isDisabled: true,
+    isDisabled: false,
+    isLoading: false,
+    leftIcon: "😃",
   },
 };

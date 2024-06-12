@@ -1,4 +1,4 @@
-import { Ref, forwardRef } from "react";
+import { KeyboardEvent, Ref, forwardRef } from "react";
 import { ButtonProps } from "./types";
 import { clsx } from "clsx";
 import {
@@ -6,6 +6,8 @@ import {
   buttonStyle,
   enableColorVariant,
   hoverColorVariant,
+  spanStyle,
+  spinnerStyle,
 } from "./style.css";
 import { vars } from "@sbjang/themes";
 import { assignInlineVars } from "@vanilla-extract/dynamic";
@@ -15,10 +17,13 @@ const Button = (props: ButtonProps, ref: Ref<HTMLButtonElement>) => {
     variant = "solid",
     size = "md",
     color = "gray",
+    leftIcon,
+    rightIcon,
+    isLoading,
     isDisabled = false,
     children,
+    onKeyDown,
     style,
-    // ...props
   } = props;
 
   const enableColor = vars.colors.$scale[color][500];
@@ -31,18 +36,29 @@ const Button = (props: ButtonProps, ref: Ref<HTMLButtonElement>) => {
       ? vars.colors.$scale[color][700]
       : vars.colors.$scale[color][100];
 
-  const disabled = isDisabled;
+  const disabled = isDisabled || isLoading;
 
+  const handleKeyDown = (event: KeyboardEvent<HTMLButtonElement>) => {
+    onKeyDown?.(event);
+
+    if (event.key === "Enter" || event.key === "13") {
+      event.preventDefault();
+      event.currentTarget.click();
+    }
+  };
   return (
     <button
       {...props}
       ref={ref}
+      onKeyDown={handleKeyDown}
+      role="button"
       className={clsx([
         buttonStyle({
           size,
           variant,
         }),
       ])}
+      data-loading={isLoading}
       disabled={disabled}
       style={{
         ...assignInlineVars({
@@ -53,7 +69,10 @@ const Button = (props: ButtonProps, ref: Ref<HTMLButtonElement>) => {
         ...style,
       }}
     >
-      {children}
+      {isLoading && <div className={spinnerStyle({ size })} />}
+      {leftIcon && <span className={spanStyle({ size })}>{leftIcon}</span>}
+      <span>{children}</span>
+      {rightIcon && <span className={spanStyle({ size })}>{rightIcon}</span>}
     </button>
   );
 };
