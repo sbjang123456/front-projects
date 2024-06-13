@@ -2743,6 +2743,7 @@ __metadata:
   resolution: "@sbjang/react-components-button@workspace:packages/react/components/button"
   dependencies:
     "@sbjang/esbuild-config": "workspace:^"
+    "@sbjang/react-hooks-button": "workspace:^"
     "@sbjang/themes": "workspace:^"
     "@types/react": ^18.3.3
     "@types/react-dom": ^18.3.0
@@ -2779,6 +2780,22 @@ __metadata:
     typescript: 5.2.2
   peerDependencies:
     "@sbjang/themes": "workspace:^"
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@sbjang/react-hooks-button@workspace:^, @sbjang/react-hooks-button@workspace:packages/react/hooks/button":
+  version: 0.0.0-use.local
+  resolution: "@sbjang/react-hooks-button@workspace:packages/react/hooks/button"
+  dependencies:
+    "@sbjang/esbuild-config": "workspace:^"
+    "@types/react": ^18.3.3
+    "@types/react-dom": ^18.3.0
+    clsx: ^2.1.1
+    react: ^18.3.1
+    react-dom: ^18.3.1
+    typescript: 5.2.2
+  peerDependencies:
     react: "*"
   languageName: unknown
   linkType: soft

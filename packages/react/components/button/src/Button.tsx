@@ -1,4 +1,4 @@
-import { KeyboardEvent, Ref, forwardRef } from "react";
+import { Ref, forwardRef } from "react";
 import { ButtonProps } from "./types";
 import { clsx } from "clsx";
 import {
@@ -11,8 +11,10 @@ import {
 } from "./style.css";
 import { vars } from "@sbjang/themes";
 import { assignInlineVars } from "@vanilla-extract/dynamic";
+import { useButton } from "@sbjang/react-hooks-button";
 
 const Button = (props: ButtonProps, ref: Ref<HTMLButtonElement>) => {
+  const { buttonProps } = useButton(props);
   const {
     variant = "solid",
     size = "md",
@@ -20,9 +22,7 @@ const Button = (props: ButtonProps, ref: Ref<HTMLButtonElement>) => {
     leftIcon,
     rightIcon,
     isLoading,
-    isDisabled = false,
     children,
-    onKeyDown,
     style,
   } = props;
 
@@ -36,21 +36,10 @@ const Button = (props: ButtonProps, ref: Ref<HTMLButtonElement>) => {
       ? vars.colors.$scale[color][700]
       : vars.colors.$scale[color][100];
 
-  const disabled = isDisabled || isLoading;
-
-  const handleKeyDown = (event: KeyboardEvent<HTMLButtonElement>) => {
-    onKeyDown?.(event);
-
-    if (event.key === "Enter" || event.key === "13") {
-      event.preventDefault();
-      event.currentTarget.click();
-    }
-  };
   return (
     <button
-      {...props}
+      {...buttonProps}
       ref={ref}
-      onKeyDown={handleKeyDown}
       role="button"
       className={clsx([
         buttonStyle({
@@ -58,8 +47,6 @@ const Button = (props: ButtonProps, ref: Ref<HTMLButtonElement>) => {
           variant,
         }),
       ])}
-      data-loading={isLoading}
-      disabled={disabled}
       style={{
         ...assignInlineVars({
           [enableColorVariant]: enableColor,
