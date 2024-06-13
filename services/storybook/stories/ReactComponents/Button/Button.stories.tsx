@@ -2,7 +2,7 @@ import React from "react";
 import "@sbjang/react-components-button/style.css";
 import { Button as _Button } from "@sbjang/react-components-button";
 import { Text } from "@sbjang/react-components-layout";
-import { useButton } from "@sbjang/react-hooks-button";
+import { useButton, useToggleButton } from "@sbjang/react-hooks-button";
 import type { Meta, StoryObj } from "@storybook/react";
 import { vars } from "@sbjang/themes";
 
@@ -62,6 +62,22 @@ export const TextButtonStory: Story = {
       >
         텍스트 버튼입니다.
       </Text>
+    );
+  },
+};
+
+export const ToggleButtonStory = {
+  render: () => {
+    const { buttonProps, isSelected } = useToggleButton({ elementType: 'button' }, false);
+
+    return (
+      <_Button
+        {...buttonProps}
+        variant={isSelected ? "solid" : "outline"}
+        color="green"
+      >
+        {isSelected ? "😀" : "😂"}
+      </_Button>
     );
   },
 };

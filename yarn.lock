@@ -2789,6 +2789,23 @@ __metadata:
   resolution: "@sbjang/react-hooks-button@workspace:packages/react/hooks/button"
   dependencies:
     "@sbjang/esbuild-config": "workspace:^"
+    "@sbjang/react-hooks-toggle": "workspace:^"
+    "@types/react": ^18.3.3
+    "@types/react-dom": ^18.3.0
+    clsx: ^2.1.1
+    react: ^18.3.1
+    react-dom: ^18.3.1
+    typescript: 5.2.2
+  peerDependencies:
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@sbjang/react-hooks-toggle@workspace:^, @sbjang/react-hooks-toggle@workspace:packages/react/hooks/toggle":
+  version: 0.0.0-use.local
+  resolution: "@sbjang/react-hooks-toggle@workspace:packages/react/hooks/toggle"
+  dependencies:
+    "@sbjang/esbuild-config": "workspace:^"
     "@types/react": ^18.3.3
     "@types/react-dom": ^18.3.0
     clsx: ^2.1.1
