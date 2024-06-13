@@ -2807,6 +2807,7 @@ __metadata:
     "@chromatic-com/storybook": ^1.5.0
     "@sbjang/react-components-button": "workspace:^"
     "@sbjang/react-components-layout": "workspace:^"
+    "@sbjang/react-hooks-button": "workspace:^"
     "@sbjang/themes": "workspace:^"
     "@storybook/addon-essentials": ^8.1.6
     "@storybook/addon-interactions": ^8.1.6
