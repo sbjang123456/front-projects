@@ -6,6 +6,7 @@
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.5.0",
+    "@sbjang/react-components-accordion": "workspace:^",
     "@sbjang/react-components-button": "workspace:^",
     "@sbjang/react-components-layout": "workspace:^",
     "@sbjang/react-hooks-button": "workspace:^",
