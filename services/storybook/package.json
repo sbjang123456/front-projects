@@ -11,6 +11,7 @@
     "@sbjang/react-components-input": "workspace:^",
     "@sbjang/react-components-layout": "workspace:^",
     "@sbjang/react-components-select": "workspace:^",
+    "@sbjang/react-components-toast": "workspace:^",
     "@sbjang/react-hooks-button": "workspace:^",
     "@sbjang/themes": "workspace:^",
     "@storybook/addon-essentials": "^8.1.6",
