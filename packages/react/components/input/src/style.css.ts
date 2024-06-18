@@ -97,22 +97,28 @@ export const inputGroupStyle = style({
   position: "relative",
 });
 
-export const inputLeftAddonStyle = recipe({
-  base: {
-    margin: 0,
-    border: 0,
-    display: "flex",
-    alignItems: "center",
-    position: "relative",
-    right: "-2px",
-    zIndex: 1,
+const inputAddonStyle = style({
+  margin: 0,
+  border: 0,
+  display: "flex",
+  alignItems: "center",
+  position: "relative",
+  zIndex: 1,
 
-    borderStyle: "solid",
-    borderWidth: "2px",
-    borderColor: vars.colors.$scale.gray[300],
-    borderRightColor: "transparent",
-    backgroundColor: vars.colors.$scale.gray[100],
-  },
+  borderStyle: "solid",
+  borderWidth: "2px",
+  borderColor: vars.colors.$scale.gray[300],
+  backgroundColor: vars.colors.$scale.gray[100],
+});
+
+export const inputLeftAddonStyle = recipe({
+  base: [
+    inputAddonStyle,
+    {
+      right: "-2px",
+      borderRightColor: "transparent",
+    },
+  ],
   variants: {
     size: {
       lg: {
@@ -139,6 +145,48 @@ export const inputLeftAddonStyle = recipe({
       xs: {
         borderStartStartRadius: vars.box.radii.sm,
         borderEndStartRadius: vars.box.radii.sm,
+        padding: "0 0.5rem",
+        height: "1.5rem",
+        fontSize: vars.typography.fontSize[12],
+      },
+    },
+  },
+});
+
+export const inputRightAddonStyle = recipe({
+  base: [
+    inputAddonStyle,
+    {
+      left: "-2px",
+      borderLeftColor: "transparent",
+    },
+  ],
+  variants: {
+    size: {
+      lg: {
+        borderStartEndRadius: vars.box.radii.md,
+        borderEndEndRadius: vars.box.radii.md,
+        padding: "0 1rem",
+        height: "3rem",
+        fontSize: vars.typography.fontSize[18],
+      },
+      md: {
+        borderStartEndRadius: vars.box.radii.base,
+        borderEndEndRadius: vars.box.radii.base,
+        padding: "0 1rem",
+        height: "2.5rem",
+        fontSize: vars.typography.fontSize[16],
+      },
+      sm: {
+        borderStartEndRadius: vars.box.radii.base,
+        borderEndEndRadius: vars.box.radii.base,
+        padding: "0 0.75rem",
+        height: "2rem",
+        fontSize: vars.typography.fontSize[14],
+      },
+      xs: {
+        borderStartEndRadius: vars.box.radii.sm,
+        borderEndEndRadius: vars.box.radii.sm,
         padding: "0 0.5rem",
         height: "1.5rem",
         fontSize: vars.typography.fontSize[12],

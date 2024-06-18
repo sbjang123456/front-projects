@@ -23,6 +23,11 @@ const InputGroup = (props: InputGroupProps, ref: Ref<HTMLDivElement>) => {
       inputStyle.borderStartStartRadius = 0;
       inputStyle.borderEndStartRadius = 0;
     }
+    // @ts-ignore
+    if (child.type.displayName === "InputRightAddon") {
+      inputStyle.borderStartEndRadius = 0;
+      inputStyle.borderEndEndRadius = 0;
+    }
   });
 
   const inputGroupChildren = childrenWithProps.map((child) => {
