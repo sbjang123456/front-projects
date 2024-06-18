@@ -2832,6 +2832,30 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@sbjang/react-components-select@workspace:^, @sbjang/react-components-select@workspace:packages/react/components/select":
+  version: 0.0.0-use.local
+  resolution: "@sbjang/react-components-select@workspace:packages/react/components/select"
+  dependencies:
+    "@sbjang/esbuild-config": "workspace:^"
+    "@sbjang/react-hooks-select": "workspace:^"
+    "@sbjang/themes": "workspace:^"
+    "@types/react": ^18.3.3
+    "@types/react-dom": ^18.3.0
+    "@vanilla-extract/css": ^1.15.2
+    "@vanilla-extract/dynamic": ^2.1.1
+    "@vanilla-extract/esbuild-plugin": ^2.3.6
+    "@vanilla-extract/recipes": ^0.5.3
+    "@vanilla-extract/sprinkles": ^1.6.2
+    clsx: ^2.1.1
+    react: ^18.3.1
+    react-dom: ^18.3.1
+    typescript: 5.2.2
+  peerDependencies:
+    "@sbjang/themes": "workspace:^"
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
 "@sbjang/react-hooks-button@workspace:^, @sbjang/react-hooks-button@workspace:packages/react/hooks/button":
   version: 0.0.0-use.local
   resolution: "@sbjang/react-hooks-button@workspace:packages/react/hooks/button"
@@ -2854,7 +2878,22 @@ __metadata:
   resolution: "@sbjang/react-hooks-input@workspace:packages/react/hooks/input"
   dependencies:
     "@sbjang/esbuild-config": "workspace:^"
-    "@sbjang/react-hooks-toggle": "workspace:^"
+    "@types/react": ^18.3.3
+    "@types/react-dom": ^18.3.0
+    clsx: ^2.1.1
+    react: ^18.3.1
+    react-dom: ^18.3.1
+    typescript: 5.2.2
+  peerDependencies:
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@sbjang/react-hooks-select@workspace:^, @sbjang/react-hooks-select@workspace:packages/react/hooks/select":
+  version: 0.0.0-use.local
+  resolution: "@sbjang/react-hooks-select@workspace:packages/react/hooks/select"
+  dependencies:
+    "@sbjang/esbuild-config": "workspace:^"
     "@types/react": ^18.3.3
     "@types/react-dom": ^18.3.0
     clsx: ^2.1.1
@@ -2891,6 +2930,7 @@ __metadata:
     "@sbjang/react-components-button": "workspace:^"
     "@sbjang/react-components-input": "workspace:^"
     "@sbjang/react-components-layout": "workspace:^"
+    "@sbjang/react-components-select": "workspace:^"
     "@sbjang/react-hooks-button": "workspace:^"
     "@sbjang/themes": "workspace:^"
     "@storybook/addon-essentials": ^8.1.6

@@ -1,5 +1,5 @@
 {
-  "name": "@sbjang/react-hooks-input",
+  "name": "@sbjang/react-hooks-select",
   "version": "0.0.1",
   "type": "module",
   "main": "dist/index.js",
