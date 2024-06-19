@@ -51,6 +51,10 @@ export const InputVariantFilledStory = {
   render: () => <Input variant="filled" placeholder="dd" />,
 };
 
+export const InputSizeStory = {
+  render: () => <Input size="xs" placeholder="dd" />,
+};
+
 export const InputFocusVisibleState = {
   render: () => <Input />,
   parameters: {
