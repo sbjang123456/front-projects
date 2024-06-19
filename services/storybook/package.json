@@ -45,7 +45,7 @@
     "test:ui": "vitest --ui",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token 943cd61c3365"
+    "chromatic": "npx chromatic --project-token chpt_4c9e43d7f5e4631"
   },
   "version": ""
 }
