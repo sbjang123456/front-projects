@@ -2986,6 +2986,7 @@ __metadata:
     "@sbjang/react-components-toast": "workspace:^"
     "@sbjang/react-hooks-button": "workspace:^"
     "@sbjang/themes": "workspace:^"
+    "@storybook/addon-a11y": ^8.1.10
     "@storybook/addon-essentials": ^8.1.6
     "@storybook/addon-interactions": ^8.1.6
     "@storybook/addon-links": ^8.1.6
@@ -3000,11 +3001,13 @@ __metadata:
     "@testing-library/user-event": ^14.5.2
     "@vitejs/plugin-react": ^4.3.1
     "@vitest/ui": ^1.6.0
+    chromatic: ^11.5.4
     happy-dom: ^14.12.0
     prop-types: ^15.8.1
     react: ^18.3.1
     react-dom: ^18.3.1
     storybook: ^8.1.6
+    storybook-addon-pseudo-states: ^3.1.1
     storybook-addon-root-attributes: ^2.1.3
     vite: ^5.2.13
     vitest: ^1.6.0
@@ -3031,6 +3034,16 @@ __metadata:
   version: 2.3.0
   resolution: "@sindresorhus/merge-streams@npm:2.3.0"
   checksum: e989d53dee68d7e49b4ac02ae49178d561c461144cea83f66fa91ff012d981ad0ad2340cbd13f2fdb57989197f5c987ca22a74eb56478626f04e79df84291159
+  languageName: node
+  linkType: hard
+
+"@storybook/addon-a11y@npm:^8.1.10":
+  version: 8.1.10
+  resolution: "@storybook/addon-a11y@npm:8.1.10"
+  dependencies:
+    "@storybook/addon-highlight": 8.1.10
+    axe-core: ^4.2.0
+  checksum: e7bfa417b377a99957f2637c8925cd493f426599d415336978444a1f1ac3990f5b739c683cfc1f25816c9adc856c012b856685c5f836c5482f9e624a72f1c662
   languageName: node
   linkType: hard
 
@@ -3118,6 +3131,15 @@ __metadata:
     "@storybook/preview-api": 8.1.6
     ts-dedent: ^2.0.0
   checksum: 5df57facd048b106c32b9e82ce3d20a4618fd8aa83819fed35820831f806b2b5b44732cf41316a5b715075cb1c3dcd56168e5de6b10d411f450709921269674f
+  languageName: node
+  linkType: hard
+
+"@storybook/addon-highlight@npm:8.1.10":
+  version: 8.1.10
+  resolution: "@storybook/addon-highlight@npm:8.1.10"
+  dependencies:
+    "@storybook/global": ^5.0.0
+  checksum: 71ac388942193342d3832f9377492155e2eee2ef47c92437f6aba7cebf3b28e02125f80209aaa99e00eaa1b26324f86c9423c2b176a1dca0739e549cc762946a
   languageName: node
   linkType: hard
 
@@ -5202,6 +5224,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"axe-core@npm:^4.2.0":
+  version: 4.9.1
+  resolution: "axe-core@npm:4.9.1"
+  checksum: 41d9227871781f96c2952e2a777fca73624959dd0e98864f6d82806a77602f82b4fc490852082a7e524d8cd864e50d8b4d9931819b4a150112981d8c932110c5
+  languageName: node
+  linkType: hard
+
 "axios@npm:^1.0.0":
   version: 1.7.2
   resolution: "axios@npm:1.7.2"
@@ -5591,6 +5620,25 @@ __metadata:
     chromatic: dist/bin.js
     chromatic-cli: dist/bin.js
   checksum: 121072ab353aa62a9187d0dc80913d5de517222e3d9e43aa855ee027bab151eb73944596a9a43a677fc611bc4573581f3afeadf986deb9d92aa9a0ad8129e275
+  languageName: node
+  linkType: hard
+
+"chromatic@npm:^11.5.4":
+  version: 11.5.4
+  resolution: "chromatic@npm:11.5.4"
+  peerDependencies:
+    "@chromatic-com/cypress": ^0.*.* || ^1.0.0
+    "@chromatic-com/playwright": ^0.*.* || ^1.0.0
+  peerDependenciesMeta:
+    "@chromatic-com/cypress":
+      optional: true
+    "@chromatic-com/playwright":
+      optional: true
+  bin:
+    chroma: dist/bin.js
+    chromatic: dist/bin.js
+    chromatic-cli: dist/bin.js
+  checksum: cc3356578017cd07f5af75aa52c60a94db5a04e02a831d698d6dd1563ea8cb35ed3a4005343e03214abea3c8dd91b31137ce66ab909cfafb1dd559180e5e3718
   languageName: node
   linkType: hard
 
@@ -11436,6 +11484,13 @@ __metadata:
   version: 2.14.3
   resolution: "store2@npm:2.14.3"
   checksum: 971a47aa479ff5491f89ee3fcbaf4ddafe0cfb55ac2f4cf4b4fc7b21d349fa3a761f79368d1573b9f65af08b3cf0f6973eed56a213b8bb4cb7e820ac048d1613
+  languageName: node
+  linkType: hard
+
+"storybook-addon-pseudo-states@npm:^3.1.1":
+  version: 3.1.1
+  resolution: "storybook-addon-pseudo-states@npm:3.1.1"
+  checksum: 70c32c3624b389e3d6bfdc8ee3bfe2e97a37798bd3a05d63eac2a3baaae3b0cb1f4cceedd8e39c194e88e5b3cf7647acf69ff4c05dd4e74ab07b101063edcc6c
   languageName: node
   linkType: hard
 
