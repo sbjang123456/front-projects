@@ -1,3 +1,4 @@
+import "@sbjang/react-components-button/style.css";
 import "@sbjang/react-components-toast/style.css";
 import { Button } from "@sbjang/react-components-button";
 import { ToastProvider, useToast } from "@sbjang/react-components-toast";
