@@ -28,9 +28,6 @@
   "peerDependencies": {
     "react": "*"
   },
-  "volta": {
-    "node": "18.20.3"
-  },
   "dependencies": {
     "@sbjang/react-hooks-toggle": "workspace:^",
     "clsx": "^2.1.1"

@@ -36,9 +36,6 @@
     "@sbjang/themes": "workspace:^",
     "react": "*"
   },
-  "volta": {
-    "node": "18.20.3"
-  },
   "dependencies": {
     "@sbjang/react-hooks-button": "workspace:^",
     "clsx": "^2.1.1"

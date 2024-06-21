@@ -1,9 +1,6 @@
 {
   "name": "@sbjang/storybook",
   "packageManager": "yarn@3.6.3",
-  "volta": {
-    "node": "18.20.3"
-  },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.5.0",
     "@sbjang/react-components-accordion": "workspace:^",
